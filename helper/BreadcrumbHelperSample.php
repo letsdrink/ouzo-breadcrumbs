@@ -1,7 +1,7 @@
 <?php
 use OuzoBreadcrumb\Breadcrumb;
 
-class BreadcrumbHelper
+class BreadcrumbHelperSample
 {
     public static function showBreadcrumbs()
     {
