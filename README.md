@@ -13,3 +13,5 @@ Usage
 -----
 
 In controller action just add: `Breadcrumb::add('Display name', '/sample/index');` to register new entry.
+
+To show generated HTML, call: `<?= BreadcrumbHelper::showBreadcrumbs() ?>`.
