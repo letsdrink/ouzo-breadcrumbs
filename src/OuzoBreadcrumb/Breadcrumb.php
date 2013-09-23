@@ -12,6 +12,9 @@ class Breadcrumb
         self::$breadcrumbsMap[] = new self($name, $path);
     }
 
+    /**
+     * @return Breadcrumb[]
+     */
     public static function getBreadcrumbs()
     {
         return self::$breadcrumbsMap;
