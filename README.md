@@ -5,9 +5,7 @@ Configuration
 -------------
 
 1. Install via [composer](http://getcomposer.org/)
-2. Copy from `vendor/letsdrink/ouzo-breadcrumbs/helper/BreadcrumbHelperSample.php` to `application/helper/BreadcrumbHelper.php`
-3. Include `BreadcrumbHelper.php` in `application/helper/ApplicationHelper.php`
-4. Modify if you want
+2. Include `vendor/letsdrink/ouzo-breadcrumbs/helper/BreadcrumbHelper.php` in `application/helper/ApplicationHelper.php`
 
 Usage
 -----
@@ -15,3 +13,10 @@ Usage
 In controller action just add: `Breadcrumb::add('Display name', '/sample/index');` to register a new entry.
 
 To show generated HTML, call: `<?= BreadcrumbHelper::showBreadcrumbs() ?>`.
+
+You can pass attributes to breadcrumbs generator:
+
+```php
+$attributes = array('class' => 'my-class', 'id' => 'breadcrumb-id');
+echo BreadcrumbHelper::showBreadcrumbs($attributes);
+```
