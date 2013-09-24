@@ -1,4 +1,5 @@
 <?php
+use Ouzo\ControllerUrl;
 use OuzoBreadcrumb\Breadcrumb;
 
 class BreadcrumbHelper
@@ -15,7 +16,8 @@ class BreadcrumbHelper
             if (end($breadcrumbsMap) === $breadcrumb) {
                 $attribute = 'class="active"';
             } else {
-                $name = '<a href="' . $breadcrumb->getPath() . '">' . $breadcrumb->getName() . '</a>';
+                $url = ControllerUrl::createUrl(array('string' => $breadcrumb->getPath()));
+                $name = '<a href="' . $url . '">' . $breadcrumb->getName() . '</a>';
             }
             $breadcrumbs .= ' <li ' . $attribute . '>' . $name . '</li> ';
         }
