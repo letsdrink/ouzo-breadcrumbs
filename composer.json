@@ -9,7 +9,8 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "3.7.27"
+        "phpunit/phpunit": "3.7.27",
+        "letsdrink/ouzo": "dev-master"
     },
     "autoload": {
         "psr-0": {

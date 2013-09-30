@@ -3,6 +3,13 @@ use OuzoBreadcrumb\Breadcrumb;
 
 class BreadcrumbTest extends PHPUnit_Framework_TestCase
 {
+    public function setUp()
+    {
+        if (!defined('ROOT_PATH')) {
+            define('ROOT_PATH', '');
+        }
+    }
+
     /**
      * @test
      */

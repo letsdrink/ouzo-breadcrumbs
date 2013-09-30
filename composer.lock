@@ -3,11 +3,55 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "54dcb9275dc73572106a73f8d33cd861",
+    "hash": "7a1be6700f1648c85dba1b096d0b4ac6",
     "packages": [
 
     ],
     "packages-dev": [
+        {
+            "name": "letsdrink/ouzo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/letsdrink/ouzo.git",
+                "reference": "a641568f971f3534e067c12278b008795e269846"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/a641568f971f3534e067c12278b008795e269846",
+                "reference": "a641568f971f3534e067c12278b008795e269846",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.27",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ouzo": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thulium",
+                    "email": "letsdrink@thulium.pl"
+                }
+            ],
+            "description": "Ouzo PHP MVC framework",
+            "keywords": [
+                "TDD",
+                "framework",
+                "mvc",
+                "orm",
+                "php"
+            ],
+            "time": "2013-09-30 20:34:54"
+        },
         {
             "name": "phpunit/php-code-coverage",
             "version": "1.2.x-dev",
@@ -436,9 +480,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "letsdrink/ouzo": 20
+    },
     "platform": [
 
     ],

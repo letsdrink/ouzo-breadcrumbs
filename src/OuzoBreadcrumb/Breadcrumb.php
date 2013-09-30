@@ -1,6 +1,9 @@
 <?php
 namespace OuzoBreadcrumb;
 
+use Ouzo\Config;
+use Ouzo\Utilities\Strings;
+
 class Breadcrumb
 {
     public static $breadcrumbsMap = array();
@@ -9,7 +12,9 @@ class Breadcrumb
 
     public static function add($name, $path)
     {
-        self::$breadcrumbsMap[] = new self($name, $path);
+        $prefixSystem = Config::getValue('global', 'prefix_system');
+        $pathWithoutPrefix = $prefixSystem ? Strings::removePrefix($path, $prefixSystem) : $path;
+        self::$breadcrumbsMap[] = new self($name, $pathWithoutPrefix);
     }
 
     /**
